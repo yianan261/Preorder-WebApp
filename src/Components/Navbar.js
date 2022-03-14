@@ -42,18 +42,23 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navLinks">
             <ul className="navbar-nav">
               <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  HOME
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/Newin" className="nav-link">
                   NEW IN
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Hot" className="nav-link">
-                  HOT
+                <Link to="/All" className="nav-link">
+                  ALL
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/All" className="nav-link">
-                  ALL
+                <Link to="/RegisterUser" className="nav-link">
+                  JOIN
                 </Link>
               </li>
               <li className="nav-item">

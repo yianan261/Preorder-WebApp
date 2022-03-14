@@ -6,6 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterUser from "./anotherpage/RegisterUser";
 import Home from "./anotherpage/Home";
+import Newin from "./anotherpage/Newin";
+import MemberCheckout from "./anotherpage/MemberCheckout";
+import AllView from "./anotherpage/AllView";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,10 +16,11 @@ ReactDOM.render(
       <App />
       <Routes>
         <Route path="/RegisterUser" element={<RegisterUser />}></Route>
-        <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/Newin" element={<Register />}></Route>
-        <Route path="/All" element={<Register />}></Route>
-        <Route path="/Hot" element={<Register />}></Route> */}
+        <Route path="/" element={<AllView />}></Route>
+        <Route path="/Newin" element={<Home />}></Route>
+        <Route path="/MemberCheckout" element={<MemberCheckout />}></Route>
+        <Route path="/All" element={<Newin />}></Route>
+        <Route path="/Join" element={<RegisterUser />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

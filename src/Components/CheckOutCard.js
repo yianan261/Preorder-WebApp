@@ -70,7 +70,7 @@ class CheckOutCard extends Component {
             </li>
           </ul>
           <div className="card-body">
-            <Link to="/Register" className="custom-btn">
+            <Link to="/MemberCheckout" className="custom-btn">
               <div className="checkout">Checkout</div>
             </Link>
           </div>
