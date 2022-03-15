@@ -6,31 +6,6 @@ class ItemManager {
    */
   initializeData() {}
 
-  //   getPublications(doneCBK) {
-  //     let res;
-
-  //     let db = new minimongo.IndexedDb(
-  //       {
-  //         namespace: "pubManagerDB",
-  //       },
-  //       function () {
-  //         console.log("DB Created");
-
-  //         db.addCollection("publications", function () {
-  //           db.publications.find({}).fetch(function (publications, err) {
-  //             res = publications;
-  //             console.log("List of publications", publications);
-
-  //             doneCBK(publications);
-  //           });
-  //         });
-  //       }
-  //     );
-  //     return res;
-  //   addItem() {
-  //     console.log("testing DB");
-  //     const IndexedDb = minimongo.IndexedDb;
-
   /**
    * getItem() method to retrieve items
    * @param {*} doneCBK
