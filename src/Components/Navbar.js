@@ -9,12 +9,14 @@ class Navbar extends Component {
       scroll: false,
     };
   }
+
   /**
    * When scrolled, this.state.scroll becomes true and
    * className selects the css selector (scrolled) that changes navbar color
    * @param {*} event
    */
   handleScroll = (event) => {
+    event.preventDefault();
     let element = event.target;
     if (element.scrollTop > element.scrollHeight) {
       this.setState({ scroll: true });

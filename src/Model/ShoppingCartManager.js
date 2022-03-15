@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-
-class ShoppingCartManager extends Component {
+class ShoppingCartManager {
   /**
    * addToShopCart method to get the subtotal
    * @param {*} _subtotal, takes a number
@@ -12,9 +10,6 @@ class ShoppingCartManager extends Component {
     // let sumTotal = manageSubtotal.reduce((prev, curr) => prev + curr, 0);
     console.log(manageSubtotal[0]);
     return manageSubtotal[0];
-  }
-  render() {
-    return <div></div>;
   }
 }
 

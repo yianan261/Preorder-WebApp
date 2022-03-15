@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { imageData, imageData2 } from "./imageData";
 import ShoppingCartManager from "../Model/ShoppingCartManager";
+import { itemData } from "../Model/ItemData";
 
 class SelectItemsCard3 extends Component {
   constructor(props) {
@@ -11,9 +11,8 @@ class SelectItemsCard3 extends Component {
 
     this.state = {
       qty: 0,
-      first: imageData[4].picture,
-      second: imageData2[4].picture,
-      originalprice: 75,
+      first: itemData[2].setGallery.thumbnail,
+      originalprice: itemData[2].price,
       price1: 75,
       subtotal: 0,
     };
@@ -22,7 +21,7 @@ class SelectItemsCard3 extends Component {
 
   /**
    * addtoCart() method to calculate the subtotal in the cart
-   * and updates
+   * and alerts user
    */
   addtoCart() {
     if (this.state.qty >= 1) {
@@ -71,7 +70,7 @@ class SelectItemsCard3 extends Component {
                   width: "600px",
                 }}
               >
-                <img className="thumbnailpic" src={this.state.second} alt="" />
+                <img className="thumbnailpic" src={this.state.first} alt="" />
                 <h4 className="titlecard">Detox Mask Set</h4>
               </Accordion.Header>
               <Accordion.Body>

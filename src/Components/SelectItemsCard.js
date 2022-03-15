@@ -1,29 +1,34 @@
 import React, { Component } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { imageData, imageData2 } from "./imageData";
 import ShoppingCartManager from "../Model/ShoppingCartManager";
+import ItemManager from "../Model/ItemManager";
+import { itemData } from "../Model/ItemData";
 
 class SelectItemsCard extends Component {
   constructor(props) {
     super(props);
 
     this.manager = new ShoppingCartManager();
+    this.item = new ItemManager();
 
     this.state = {
       qty: 0,
-      first: imageData[4].picture,
-      second: imageData2[4].picture,
-      originalprice: 60,
-      price1: 60,
+      first: itemData[0].setGallery.thumbnail,
+      originalprice: itemData[0].price,
+      priceshown: 60,
       subtotal: 0,
     };
     this.addtoCart = this.addtoCart.bind(this);
   }
 
+  /**
+   * addtoCart() function to calculate subtotal
+   * and alert items have been added to cart
+   */
   addtoCart() {
     if (this.state.qty >= 1) {
-      this.setState({ subtotal: this.state.price1 });
-      let sumTotal = this.manager.addToShopCart(this.state.price1);
+      this.setState({ subtotal: this.state.priceshown });
+      let sumTotal = this.manager.addToShopCart(this.state.price);
       console.log(sumTotal);
 
       alert("Added to Shopping Cart!");
@@ -41,7 +46,7 @@ class SelectItemsCard extends Component {
       let price = quantity > 0 ? quantity * this.state.originalprice : 60;
       this.setState({
         qty: quantity,
-        price1: price,
+        priceshown: price,
       });
     }
   }
@@ -53,7 +58,7 @@ class SelectItemsCard extends Component {
     let quantity = this.state.qty + 1;
     this.setState({
       qty: quantity,
-      price1: quantity * this.state.originalprice,
+      priceshown: quantity * this.state.originalprice,
     });
   }
   render() {
@@ -72,7 +77,7 @@ class SelectItemsCard extends Component {
                 <h4 className="titlecard">Super Mask Set</h4>
               </Accordion.Header>
               <Accordion.Body>
-                <h5>Limited Time Offer: $ {this.state.price1}</h5>
+                <h5>Limited Time Offer: $ {this.state.priceshown}</h5>
                 <button
                   type="button"
                   id="setbtn"
