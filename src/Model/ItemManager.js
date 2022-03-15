@@ -45,7 +45,7 @@ class ItemManager {
    * @param  {...any} args
    */
 
-  addItem(obj) {
+  addItem(...args) {
     console.log("testing DB");
     const IndexedDb = minimongo.IndexedDb;
 
@@ -54,7 +54,7 @@ class ItemManager {
       // Add items collection to the database
       itemDb.addCollection("items", function () {
         // Always use upsert for both inserts and modifies
-        itemDb.items.upsert(obj, function (res) {
+        itemDb.items.upsert([args], function (res) {
           //success:
           console.log("Item inserted", res);
         });
