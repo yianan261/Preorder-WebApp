@@ -26,7 +26,7 @@ React router Dom was installed to do routing implementation
 
 ### Bootstrap
 
-The design of the website was implemented with CSS, bootstrap, and react-bootstrap, in future I will get rid of reac-bootstrap and just use the original bootstrap. 
+The design of the website was implemented with CSS, bootstrap, and react-bootstrap, in future I will get rid of react-bootstrap and just use the original bootstrap. But for now it will have both since the bootstrap Accordion implementation did not work on my program.  
 
 
 ### Deployment
