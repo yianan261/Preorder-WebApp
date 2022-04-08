@@ -1,6 +1,6 @@
 # Preorder Website
 
-This project was implemented with react. Preorder website is an ecommerce platform for users to place preorders on products listed. This particular project uses class components instead of functional components of react.
+Preorder website is a front-end only webapp implemented with React. Preorder website is an ecommerce platform for users to place preorders on products listed. This particular project uses class components instead of functional components of react.
 Users may browse the site, and check the listed product and its details. At the product browse page, users may view the details of the product and check the special preorder sales bundle at the bottom. Users may add however many quantity they would like to purchase and add to cart. The checkout button routes users to member login, which has not been implemented (yet). New users may click on "join" on the navbar to fill in information, which gets pushed to minimongo database. 
 
 # Usage 
